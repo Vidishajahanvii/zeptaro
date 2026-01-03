@@ -159,11 +159,23 @@ const ContactSection = () => {
                       <item.icon className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <span className="block text-sm text-muted-foreground">{item.label}</span>
-                      <span className="font-medium text-card-foreground group-hover:text-primary transition-colors">
-                        {item.value}
-                      </span>
-                    </div>
+  <span className="block text-sm font-semibold text-muted-foreground mb-1">
+    {item.label}
+  </span>
+
+  {item.label === "Address" ? (
+    <p className="text-sm leading-relaxed text-gray-600 max-w-md">
+      Ward No. 7, Vil - Godhwa, Post - Pataura, P.S - Motihari,<br />
+      Dist - East Champaran, Bihar – 845401
+    </p>
+  ) : (
+   <span className="font-medium text-card-foreground group-hover:text-violet-600 transition-colors">
+  {item.value}
+</span>
+
+  )}
+</div>
+
                   </a>
                 ))}
               </div>
